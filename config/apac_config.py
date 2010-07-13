@@ -151,7 +151,7 @@ er171DataLocalView.ACL = ['/ARCS/BeSTGRID/UoA/LocalUsers']
 er171DrugView = er171CE.views['er171.arcs.bestgrid.drug_discovery'] = VOView()
 er171DrugView.RealUser = 'grid-vs'
 er171DrugView.DataDir = '/home/grid-vs[label=Drug discovery home;user_subdir=False]'
-r171DrugView.DefaultSE = 'ng2.auckland.ac.nz'
+er171DrugView.DefaultSE = 'ng2.auckland.ac.nz'
 er171DrugView.ACL = ['/ARCS/BeSTGRID/Drug_discovery']
 
 subcluster = package.SubCluster['ng2.auckland.ac.nz-hpc2'] = SubCluster()
