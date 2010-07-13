@@ -150,8 +150,8 @@ er171DataLocalView.ACL = ['/ARCS/BeSTGRID/UoA/LocalUsers']
 
 er171DrugView = er171CE.views['er171.arcs.bestgrid.drug_discovery'] = VOView()
 er171DrugView.RealUser = 'grid-vs'
-er171DrugView.DataDir = '${GLOBUS_USER_HOME}'
-er171DrugView.DefaultSE = 'ng2.auckland.ac.nz'
+er171DrugView.DataDir = '/home/grid-vs[label=Drug discovery home;user_subdir=False]'
+r171DrugView.DefaultSE = 'ng2.auckland.ac.nz'
 er171DrugView.ACL = ['/ARCS/BeSTGRID/Drug_discovery']
 
 subcluster = package.SubCluster['ng2.auckland.ac.nz-hpc2'] = SubCluster()
@@ -238,7 +238,7 @@ ng2BrowningsArea.ACL = [ '/ARCS/BeSTGRID/UoA/Brownings' ]
 
 ng2DrugArea = ng2StorageElement.areas['ng2.arcs.bestgrid.drug_discovery'] = StorageArea()
  
-ng2DrugArea.Path = '${GLOBUS_USER_HOME}'
+ng2DrugArea.Path = '/home/grid-vs[label=Drug discovery home;user_subdir=False]'
 ng2DrugArea.Type = 'volatile'
 ng2DrugArea.ACL = [ '/ARCS/BeSTGRID/Drug_discovery' ]
 
