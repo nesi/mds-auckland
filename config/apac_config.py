@@ -116,7 +116,7 @@ er171CE.LRMSType = 'Torque' # Torque|PBSPro|ANUPBS
 er171CE.qstat = '/usr/local/bin/qstat2'
 er171CE.pbsnodes = '/usr/local/bin/pbsnodes'
 er171CE.ACL = [ '/ARCS/NGAdmin', '/ARCS/BeSTGRID/UoA/BioInfo', '/ARCS/BeSTGRID', '/ARCS/BeSTGRID/UoA/SSRG1',
-                        '/ARCS/BeSTGRID/UoA/Brownings','/ARCS/BeSTGRID/Drug_discovery', '/ARCS/BeSTGRID/UoA/LocalUsers']
+                        '/ARCS/BeSTGRID/UoA/Brownings','/ARCS/BeSTGRID/Drug_discovery', '/ARCS/BeSTGRID/UoA/LocalUsers', 'ARCS/BeSTGRID/Local']
 
 er171BeSTGRIDView = er171CE.views['er171.arcs.bestgrid'] = VOView()
 
@@ -124,6 +124,13 @@ er171BeSTGRIDView.RealUser = 'grid-bestgrid'
 er171BeSTGRIDView.DefaultSE = 'ng2.auckland.ac.nz'
 er171BeSTGRIDView.DataDir = '/home/grid-bestgrid'
 er171BeSTGRIDView.ACL = [ '/ARCS/BeSTGRID' ]
+
+er171BeSTGRIDLocalView = er171CE.views['er171.arcs.bestgrid.local'] = VOView()
+
+#er171BeSTGRIDLocalView.RealUser = 'grid-bestgrid'
+er171BeSTGRIDLocalView.DefaultSE = 'ng2.auckland.ac.nz'
+er171BeSTGRIDLocalView.DataDir = '.[label=BeSTGRID home;user_subdir=False']
+er171BeSTGRIDLocalView.ACL = [ '/ARCS/BeSTGRID/Local' ]
 
 er171BrowningsView = er171CE.views['er171.arcs.bestgrid.uoa.brownings'] = VOView()
 
@@ -205,6 +212,12 @@ ng2BeSTGRIDArea = ng2StorageElement.areas['ng2.arcs.bestgrid'] = StorageArea()
 ng2BeSTGRIDArea.Path = '/home/grid-bestgrid'
 ng2BeSTGRIDArea.Type = 'volatile'
 ng2BeSTGRIDArea.ACL = [ '/ARCS/BeSTGRID' ]
+
+ng2BeSTGRIDArea = ng2StorageElement.areas['ng2.arcs.bestgrid.local'] = StorageArea()
+ 
+ng2BeSTGRIDArea.Path = '.[label=BeSTGRID home;user_subdir=False'
+ng2BeSTGRIDArea.Type = 'volatile'
+ng2BeSTGRIDArea.ACL = [ '/ARCS/BeSTGRID/Local' ]
 # /STORAGE ELEMENT AREA
 
 # STORAGE ELEMENT AREA
