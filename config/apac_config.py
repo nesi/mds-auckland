@@ -215,7 +215,7 @@ ng2BeSTGRIDArea.ACL = [ '/ARCS/BeSTGRID' ]
 
 ng2BeSTGRIDArea = ng2StorageElement.areas['ng2.arcs.bestgrid.local'] = StorageArea()
  
-ng2BeSTGRIDArea.Path = '.[label=BeSTGRID home;user_subdir=False'
+ng2BeSTGRIDArea.Path = '.[label=BeSTGRID home;user_subdir=False]'
 ng2BeSTGRIDArea.Type = 'volatile'
 ng2BeSTGRIDArea.ACL = [ '/ARCS/BeSTGRID/Local' ]
 # /STORAGE ELEMENT AREA
