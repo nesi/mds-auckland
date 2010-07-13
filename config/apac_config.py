@@ -129,7 +129,7 @@ er171BeSTGRIDLocalView = er171CE.views['er171.arcs.bestgrid.local'] = VOView()
 
 #er171BeSTGRIDLocalView.RealUser = 'grid-bestgrid'
 er171BeSTGRIDLocalView.DefaultSE = 'ng2.auckland.ac.nz'
-er171BeSTGRIDLocalView.DataDir = '.[label=BeSTGRID home;user_subdir=False']
+er171BeSTGRIDLocalView.DataDir = '.[label=BeSTGRID home;user_subdir=False]'
 er171BeSTGRIDLocalView.ACL = [ '/ARCS/BeSTGRID/Local' ]
 
 er171BrowningsView = er171CE.views['er171.arcs.bestgrid.uoa.brownings'] = VOView()
