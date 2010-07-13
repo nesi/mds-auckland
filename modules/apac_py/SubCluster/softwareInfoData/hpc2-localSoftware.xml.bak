@@ -1,0 +1,154 @@
+
+<SoftwarePackages xmlns:glue="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" 
+  xmlns:apac="http://grid.apac.edu.au/glueschema/Spec/V12/R2"
+  xmlns="http://www.ivec.org/softwareSubSchema/Spec/V12/R2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.ivec.org/softwareSubSchema/Spec/V12/R2 APACSoftwareSubSchemaR2.xsd">
+
+	<SoftwarePackage LocalID="MrBayes/3.1.2" xmlns="http://grid.apac.edu.au/glueschema/Spec/V12/R2">
+		<Name>MrBayes</Name>
+		<Version>3.1.2</Version>
+		<Module>mrbayes/3.1.2</Module>
+		<ACL>
+			<glue:Rule>/ARCS/*</glue:Rule>
+		</ACL>
+                <SoftwareExecutable LocalID="mrbayes-parallel">
+                        <Name>mb</Name>
+                        <Path>/opt/Bio/mrbayes</Path>
+                        <SerialAvail>false</SerialAvail>
+                        <ParallelAvail>true</ParallelAvail>
+                </SoftwareExecutable>
+	</SoftwarePackage>
+	<SoftwarePackage LocalID="mpiBLAST/1.5.0" xmlns="http://grid.apac.edu.au/glueschema/Spec/V12/R2">
+		<Name>mpiBLAST</Name>
+		<Version>1.5.0</Version>
+		<Module>mpiblast/1.5.0</Module>
+		<ACL>
+			<glue:Rule>/ARCS/*</glue:Rule>
+		</ACL>
+                <SoftwareExecutable LocalID="mpiblast-parallel">
+                        <Name>mpiblast</Name>
+                        <Path>/opt/Bio/mpiblast/bin</Path>
+                        <SerialAvail>false</SerialAvail>
+                        <ParallelAvail>true</ParallelAvail>
+                </SoftwareExecutable>
+	</SoftwarePackage>
+
+	<SoftwarePackage LocalID="BEAST/1.4.7" xmlns="http://grid.apac.edu.au/glueschema/Spec/V12/R2">
+          <Name>BEAST</Name>
+          <Version>1.4.7</Version>
+          <Module>BEAST/1.4.7</Module>
+          <SoftwareExecutable LocalID="BEAST/1.4.7-sequential">
+            <Name>beast</Name>
+            <Path>/opt/shared/bin/</Path>
+            <SerialAvail>true</SerialAvail>
+            <ParallelAvail>false</ParallelAvail>
+          </SoftwareExecutable>
+        </SoftwarePackage>
+
+
+	 <SoftwarePackage LocalID="Java/1.6.0_13" xmlns="http://grid.apac.edu.au/glueschema/Spec/V12/R2">
+          <Name>Java</Name>
+          <Version>1.6</Version>
+          <Module>java/1.6.0_13</Module>
+          <SoftwareExecutable LocalID="Java/1.6.0_13-java">
+            <Name>java</Name>
+            <Path>/usr/java/latest/bin/java</Path>
+            <SerialAvail>true</SerialAvail>
+            <ParallelAvail>false</ParallelAvail>
+          </SoftwareExecutable>
+	  <SoftwareExecutable LocalID="Java/1.6.0_04-javac">
+            <Name>javac</Name>
+              <Path>/usr/java/latest/bin/javac</Path>
+            <SerialAvail>true</SerialAvail>
+            <ParallelAvail>false</ParallelAvail>
+          </SoftwareExecutable>
+        </SoftwarePackage>
+
+	<SoftwarePackage LocalID="R/2.9.0" xmlns="http://grid.apac.edu.au/glueschema/Spec/V12/R2">
+          <Name>R</Name>
+          <Version>2.9.0</Version>
+          <Module>R/2.9.0</Module>
+          <SoftwareExecutable LocalID="R/2.9.0">
+            <Name>R</Name>
+            <Path>/usr/bin</Path>
+            <SerialAvail>true</SerialAvail>
+            <ParallelAvail>false</ParallelAvail>
+          </SoftwareExecutable>
+        </SoftwarePackage>
+
+		<SoftwarePackage LocalID="python/2.4.3" xmlns="http://grid.apac.edu.au/glueschema/Spec/V12/R2">
+          <Name>python</Name>
+          <Version>2.4.3</Version>
+          <Module>python/2.4.3</Module>
+          <SoftwareExecutable LocalID="python/2.4.3">
+            <Name>python</Name>
+            <Path>/usr/bin</Path>
+            <SerialAvail>true</SerialAvail>
+            <ParallelAvail>false</ParallelAvail>
+          </SoftwareExecutable>
+        </SoftwarePackage>
+
+
+	       <SoftwarePackage LocalID="UnixCommands/coreutils-5.2.1-31.7" xmlns="http://grid.apac.edu.au/glueschema/Spec/V12/R2">
+          <Name>UnixCommands</Name>
+          <Version>coreutils-5.2.1-31.7</Version>
+          <Module>UnixCommands/coreutils-5.2.1-31.7</Module>
+          <SoftwareExecutable LocalID="UnixCommands/coreutils-5.2.1-31.7-cat">
+            <Name>cat</Name>
+            <Path>/bin</Path>
+            <SerialAvail>true</SerialAvail>
+            <ParallelAvail>false</ParallelAvail>
+          </SoftwareExecutable>
+          <SoftwareExecutable LocalID="UnixCommands/coreutils-5.2.1-31.7-diff">
+            <Name>diff</Name>
+            <Path>/usr/bin</Path>
+            <SerialAvail>true</SerialAvail>
+            <ParallelAvail>false</ParallelAvail>
+          </SoftwareExecutable>
+          <SoftwareExecutable LocalID="UnixCommands/coreutils-5.2.1-31.7-echo">
+            <Name>echo</Name>
+            <Path>/bin</Path>
+            <SerialAvail>true</SerialAvail>
+            <ParallelAvail>false</ParallelAvail>
+          </SoftwareExecutable>
+          <SoftwareExecutable LocalID="UnixCommands/coreutils-5.2.1-31.7-ls">
+            <Name>ls</Name>
+            <Path>/bin</Path>
+            <SerialAvail>true</SerialAvail>
+            <ParallelAvail>false</ParallelAvail>
+          </SoftwareExecutable>
+          <SoftwareExecutable LocalID="UnixCommands/coreutils-5.2.1-31.7-pwd">
+            <Name>pwd</Name>
+            <Path>/bin</Path>
+            <SerialAvail>true</SerialAvail>
+            <ParallelAvail>false</ParallelAvail>
+          </SoftwareExecutable>
+        </SoftwarePackage>
+
+	<SoftwarePackage LocalID="octave/3.0.3" xmlns="http://grid.apac.edu.au/glueschema/Spec/V12/R2">
+          <Name>octave</Name>
+          <Version>3.0.3</Version>
+          <Module>octave/3.0.3</Module>
+          <SoftwareExecutable LocalID="octave/3.0.3">
+            <Name>octave</Name>
+            <Path>/usr/bin</Path>
+            <SerialAvail>true</SerialAvail>
+            <ParallelAvail>false</ParallelAvail>
+          </SoftwareExecutable>
+        </SoftwarePackage>
+
+	<SoftwarePackage LocalID="RMPISNOW/2.9.0" xmlns="http://grid.apac.edu.au/glueschema/Spec/V12/R2">
+          <Name>RMPISNOW</Name>
+          <Version>2.9.0</Version>
+          <Module>octave/2.0.9</Module>
+          <SoftwareExecutable LocalID="RMPISNOW/2.9.0">
+            <Name>RMPISNOW</Name>
+            <Path>/usr/lib64/R/library/snow</Path>
+            <SerialAvail>false</SerialAvail>
+            <ParallelAvail>true</ParallelAvail>
+          </SoftwareExecutable>
+        </SoftwarePackage>
+
+</SoftwarePackages>
+

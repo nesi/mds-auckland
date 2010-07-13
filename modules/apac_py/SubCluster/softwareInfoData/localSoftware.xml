@@ -1,0 +1,57 @@
+<SoftwarePackages xmlns:glue="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2" xmlns:apac="http://grid.apac.edu.au/glueschema/Spec/V12/R2" xmlns="http://www.ivec.org/softwareSubSchema/Spec/V12/R2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ivec.org/softwareSubSchema/Spec/V12/R2 APACSoftwareSubSchemaR2.xsd">
+
+	<SoftwarePackage LocalID="FullyDefinedSoftwarePackage" xmlns="http://grid.apac.edu.au/glueschema/Spec/V12/R2">
+		<Name>Name1</Name>
+		<Version>Version1</Version>
+		<Path>Path1</Path>
+		<QueueResource>Resource1</QueueResource>
+		<Module>Module1</Module>
+		<SerialAvail>true</SerialAvail>
+		<ParallelAvail>true</ParallelAvail>           
+		<ParallelMaxCPUs>0</ParallelMaxCPUs>
+		<SupportedParallelType>parallel-type</SupportedParallelType>
+		<LicenseType>opensource</LicenseType>
+		<TotalCPUSeats>0</TotalCPUSeats>
+		<FreeCPUSeats>0</FreeCPUSeats>
+		<TotalJobSeats>0</TotalJobSeats>
+		<FreeJobSeats>0</FreeJobSeats>	
+		<TotalUserSeats>0</TotalUserSeats>
+		<FreeUserSeats>0</FreeUserSeats>
+		<ACL>
+			<glue:Rule>Rule1</glue:Rule>
+		</ACL>
+		<VOView LocalID="LocalID">
+			<ACL>
+				<glue:Rule>Rule1</glue:Rule>
+			</ACL>
+			<TotalCPUSeats>0</TotalCPUSeats>
+			<FreeCPUSeats>0</FreeCPUSeats>
+			<TotalJobSeats>0</TotalJobSeats>
+			<FreeJobSeats>0</FreeJobSeats>
+			<TotalUserSeats>0</TotalUserSeats>
+			<FreeUserSeats>0</FreeUserSeats>
+		</VOView>
+		<SoftwareExecutable LocalID="Executable1">
+			<Name>NameE1</Name>
+			<Path>PathE1</Path>
+			<SerialAvail>true</SerialAvail>
+			<ParallelAvail>true</ParallelAvail>
+			<ParallelMaxCPUs>0</ParallelMaxCPUs>
+			<ParallelType>parallel-type</ParallelType>
+		</SoftwareExecutable>
+		<Data>
+			<Key>NameD1</Key>
+			<Value>ValueD1</Value>
+		</Data>
+	</SoftwarePackage>
+	
+	<SoftwarePackage LocalID="MinimallyDefinedSoftwarePackage" xmlns="http://grid.apac.edu.au/glueschema/Spec/V12/R2">
+		<Name>Name2</Name>
+		<Version>Version2</Version>
+		<Module>Module2</Module>
+		<SerialAvail>true</SerialAvail>
+		<ParallelAvail>true</ParallelAvail>           
+		<ParallelMaxCPUs>0</ParallelMaxCPUs>
+	</SoftwarePackage>
+	
+</SoftwarePackages>
