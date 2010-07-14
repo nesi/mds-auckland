@@ -120,7 +120,7 @@ er171GoldCE.ACL = [ '/ARCS/BeSTGRID/Drug_discovery/Local']
 goldView = er171GoldCE.views['er171.arcs.bestgrid.drug_discovery.local'] = VOView()
 
 goldView.DefaultSE = 'ng2.auckland.ac.nz'
-goldView.DataDir = '.[label=BeSTGRID home;user_subdir=False]'
+goldView.DataDir = '.[label=VS Job dir;user_subdir=False;hidden=True]'
 goldView.ACL = [ '/ARCS/BeSTGRID/Drug_discovery/Local' ]
 
 
