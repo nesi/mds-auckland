@@ -76,11 +76,11 @@
           </SoftwareExecutable>
         </SoftwarePackage>
 
-		<SoftwarePackage LocalID="python/2.4.3" xmlns="http://grid.apac.edu.au/glueschema/Spec/V12/R2">
+		<SoftwarePackage LocalID="python/2.4" xmlns="http://grid.apac.edu.au/glueschema/Spec/V12/R2">
           <Name>python</Name>
-          <Version>2.4.3</Version>
-          <Module>python/2.4.3</Module>
-          <SoftwareExecutable LocalID="python/2.4.3">
+          <Version>2.4</Version>
+          <Module>python/2.4</Module>
+          <SoftwareExecutable LocalID="python/2.4">
             <Name>python</Name>
             <Path>/usr/bin</Path>
             <SerialAvail>true</SerialAvail>
@@ -156,6 +156,17 @@
             <Name>parallel_gold_auto</Name>
             <Path>/share/apps/gold/GOLD_Suite/bin</Path>
             <SerialAvail>false</SerialAvail>
+            <ParallelAvail>true</ParallelAvail>
+          </SoftwareExecutable>
+        </SoftwarePackage>
+
+	<SoftwarePackage LocalID="szybki/1.3.4" xmlns="http://grid.apac.edu.au/glueschema/Spec/V12/R2">
+          <Name>szybki</Name>
+          <Version>1.3.4</Version>
+          <SoftwareExecutable LocalID="szybki/1.3.4">
+            <Name>szybki</Name>
+            <Path>/share/apps/bio/openeye/arch/redhat-RHEL4-x86/szybki/1.3.4/bin</Path>
+            <SerialAvail>true</SerialAvail>
             <ParallelAvail>true</ParallelAvail>
           </SoftwareExecutable>
         </SoftwarePackage>

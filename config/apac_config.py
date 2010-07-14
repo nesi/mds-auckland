@@ -101,6 +101,30 @@ cluster.Name = 'er171.ceres.auckland.ac.nz'
 cluster.WNTmpDir = '/tmp'
 cluster.TmpDir = '/home/grid-bestgrid'
 
+er171GoldCE = package.ComputingElement['ng2.auckland.ac.nz-gold'] = ComputingElement()
+er171GoldCE.Name = 'gold@er171.ceres.auckland.ac.nz'
+er171GoldCE.Status = 'Production'
+er171GoldCE.JobManager = 'PBS'
+er171GoldCE.HostName = 'ng2.auckland.ac.nz'
+er171GoldCE.GateKeeperPort = 8443
+er171GoldCE.ContactString = 'https://ng2.auckland.ac.nz:8443/wsrf/services/ManagedJobFactoryService'
+er171GoldCE.DefaultSE = 'ng2.auckland.ac.nz'
+er171GoldCE.ApplicationDir = '/share/apps'
+er171GoldCE.DataDir = '/home/grid-vs'
+er171GoldCE.LRMSType = 'Torque' # Torque|PBSPro|ANUPBS
+
+er171GoldCE.qstat = '/usr/local/bin/qstat2'
+er171GoldCE.pbsnodes = '/usr/local/bin/pbsnodes'
+er171GoldCE.ACL = [ '/ARCS/BeSTGRID/Drug_discovery/Local']
+
+goldView = er171GoldCE.views['er171.arcs.bestgrid.drug_discovery.local'] = VOView()
+
+goldView.DefaultSE = 'ng2.auckland.ac.nz'
+goldView.DataDir = '.[label=BeSTGRID home;user_subdir=False]'
+goldView.ACL = [ '/ARCS/BeSTGRID/Drug_discovery/Local' ]
+
+
+
 er171CE = package.ComputingElement['ng2.auckland.ac.nz-er171CE'] = ComputingElement()
 er171CE.Name = 'route@er171.ceres.auckland.ac.nz'
 er171CE.Status = 'Production'
