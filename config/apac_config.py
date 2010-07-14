@@ -242,29 +242,27 @@ ng2BeSTGRIDArea = ng2StorageElement.areas['ng2.arcs.bestgrid.local'] = StorageAr
 ng2BeSTGRIDArea.Path = '.[label=BeSTGRID home;user_subdir=False]'
 ng2BeSTGRIDArea.Type = 'volatile'
 ng2BeSTGRIDArea.ACL = [ '/ARCS/BeSTGRID/Local' ]
-# /STORAGE ELEMENT AREA
 
-# STORAGE ELEMENT AREA
-# this name must be unique for each storage area in the storage element. It is not reference anywhere else.
-# see twiki page for further details on this section
+
 ng2BioInfoArea = ng2StorageElement.areas['ng2.arcs.bestgrid.uoa.bioinfo'] = StorageArea()
- 
 ng2BioInfoArea.Path = '/home/LocalUsers'
 ng2BioInfoArea.Type = 'volatile'
 ng2BioInfoArea.ACL = [ '/ARCS/BeSTGRID/UoA/BioInfo' ]
 
 ng2BrowningsArea = ng2StorageElement.areas['ng2.arcs.bestgrid.uoa.brownings'] = StorageArea()
- 
 ng2BrowningsArea.Path = '/home/grid-browning'
 ng2BrowningsArea.Type = 'volatile'
 ng2BrowningsArea.ACL = [ '/ARCS/BeSTGRID/UoA/Brownings' ]
 
 
 ng2DrugArea = ng2StorageElement.areas['ng2.arcs.bestgrid.drug_discovery'] = StorageArea()
- 
 ng2DrugArea.Path = '/home/grid-vs[label=Drug discovery home;user_subdir=False]'
 ng2DrugArea.Type = 'volatile'
 ng2DrugArea.ACL = [ '/ARCS/BeSTGRID/Drug_discovery' ]
+
+ng2DrugLocalArea = ng2StorageElement.areas['ng2.arcs.bestgrid.drug_discovery.local'] = StorageArea()
+ng2DrugLocalArea.Path =  '.[label=VS Job dir;user_subdir=False;hidden=True]'
+ng2DrugLocalArea.ACL = [ '/ARCS/BeSTGRID/Drug_discovery/Local' ]
 
 
 # /STORAGE ELEMENT AREA
