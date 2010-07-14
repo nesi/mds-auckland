@@ -140,7 +140,7 @@ er171CE.LRMSType = 'Torque' # Torque|PBSPro|ANUPBS
 er171CE.qstat = '/usr/local/bin/qstat2'
 er171CE.pbsnodes = '/usr/local/bin/pbsnodes'
 er171CE.ACL = [ '/ARCS/NGAdmin', '/ARCS/BeSTGRID/UoA/BioInfo', '/ARCS/BeSTGRID', '/ARCS/BeSTGRID/UoA/SSRG1',
-                        '/ARCS/BeSTGRID/UoA/Brownings','/ARCS/BeSTGRID/Drug_discovery', '/ARCS/BeSTGRID/UoA/LocalUsers', '/ARCS/BeSTGRID/Local', '/ARCS/BeSTGRID/Drug_discovery/Local' ]
+                        '/ARCS/BeSTGRID/UoA/Brownings','/ARCS/BeSTGRID/Drug_discovery', '/ARCS/BeSTGRID/UoA/LocalUsers', '/ARCS/BeSTGRID/Local' ]
 
 er171BeSTGRIDView = er171CE.views['er171.arcs.bestgrid'] = VOView()
 
