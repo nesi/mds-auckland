@@ -140,7 +140,7 @@
 	<SoftwarePackage LocalID="RMPISNOW/2.9.0" xmlns="http://grid.apac.edu.au/glueschema/Spec/V12/R2">
           <Name>RMPISNOW</Name>
           <Version>2.9.0</Version>
-          <Module>octave/2.0.9</Module>
+          <Module>RMPISNOW/2.0.9</Module>
           <SoftwareExecutable LocalID="RMPISNOW/2.9.0">
             <Name>RMPISNOW</Name>
             <Path>/usr/lib64/R/library/snow</Path>
