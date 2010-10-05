@@ -151,7 +151,7 @@ er171BeSTGRIDView.DefaultSE = 'ng2.auckland.ac.nz'
 er171BeSTGRIDView.DataDir = '/home/grid-bestgrid'
 er171BeSTGRIDView.ACL = [ '/ARCS/BeSTGRID' ]
 
-er171UoAView = er171CE.views['er171.arcs.bestgrid'] = VOView()
+er171UoAView = er171CE.views['er171.arcs.bestgrid.uoa.localusers'] = VOView()
 er171UoAView.DefaultSE = 'ng2.auckland.ac.nz'
 er171UoAView.DataDir = '${GLOBUS_USER_HOME}'
 er171UoAView.ACL = [ '/ARCS/BeSTGRID/UoA/LocalUsers' ]
