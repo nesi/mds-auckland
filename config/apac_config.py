@@ -111,6 +111,7 @@ er171GoldCE.ContactString = 'https://ng2.auckland.ac.nz:8443/wsrf/services/Manag
 er171GoldCE.DefaultSE = 'ng2.auckland.ac.nz'
 er171GoldCE.ApplicationDir = '/share/apps'
 er171GoldCE.DataDir = '/home/grid-vs'
+er171GoldCE.GRAMVersion = '4.0.5'
 er171GoldCE.LRMSType = 'Torque' # Torque|PBSPro|ANUPBS
 
 er171GoldCE.qstat = '/usr/local/bin/qstat2'
@@ -135,12 +136,13 @@ er171CE.ContactString = 'https://ng2.auckland.ac.nz:8443/wsrf/services/ManagedJo
 er171CE.DefaultSE = 'ng2.auckland.ac.nz'
 er171CE.ApplicationDir = '/share/apps'
 er171CE.DataDir = cluster.TmpDir
+er171CE.GRAMVersion = '4.0.5'
 er171CE.LRMSType = 'Torque' # Torque|PBSPro|ANUPBS
 
 er171CE.qstat = '/usr/local/bin/qstat2'
 er171CE.pbsnodes = '/usr/local/bin/pbsnodes'
 er171CE.ACL = [ '/ARCS/NGAdmin', '/ARCS/BeSTGRID/UoA/BioInfo', '/ARCS/BeSTGRID', '/ARCS/BeSTGRID/UoA/SSRG1',
-                        '/ARCS/BeSTGRID/UoA/Brownings','/ARCS/BeSTGRID/Drug_discovery', '/ARCS/BeSTGRID/UoA/LocalUsers', '/ARCS/BeSTGRID/Local' ]
+                        '/ARCS/BeSTGRID/UoA/Brownings','/ARCS/BeSTGRID/Drug_discovery', '/ARCS/BeSTGRID/UoA/CivEng','/ARCS/BeSTGRID/UoA/LocalUsers', '/ARCS/BeSTGRID/Local' ]
 
 er171BeSTGRIDView = er171CE.views['er171.arcs.bestgrid'] = VOView()
 
@@ -148,6 +150,26 @@ er171BeSTGRIDView.RealUser = 'grid-bestgrid'
 er171BeSTGRIDView.DefaultSE = 'ng2.auckland.ac.nz'
 er171BeSTGRIDView.DataDir = '/home/grid-bestgrid'
 er171BeSTGRIDView.ACL = [ '/ARCS/BeSTGRID' ]
+
+er171UoAView = er171CE.views['er171.arcs.bestgrid.uoa.localusers'] = VOView()
+er171UoAView.DefaultSE = 'ng2.auckland.ac.nz'
+er171UoAView.DataDir = '${GLOBUS_USER_HOME}'
+er171UoAView.ACL = [ '/ARCS/BeSTGRID/UoA/LocalUsers' ]
+
+
+er171CivEngView = er171CE.views['er171.arcs.bestgrid.uoa.civeng'] = VOView()
+
+er171CivEngView.RealUser = 'grid-civil'
+er171CivEngView.DefaultSE = 'ng2.auckland.ac.nz'
+er171CivEngView.DataDir = '/home/grid-civil'
+er171CivEngView.ACL = [ '/ARCS/BeSTGRID/UoA/CivEng' ]
+
+er171NGAdminView = er171CE.views['er171.arcs.ngadmin'] = VOView()
+
+er171NGAdminView.RealUser = 'grid-admin'
+er171NGAdminView.DefaultSE = 'ng2.auckland.ac.nz'
+er171NGAdminView.DataDir = '/home/grid-admin'
+er171NGAdminView.ACL = [ '/ARCS/NGAdmin' ]
 
 er171BeSTGRIDLocalView = er171CE.views['er171.arcs.bestgrid.local'] = VOView()
 
@@ -237,11 +259,23 @@ ng2BeSTGRIDArea.Path = '/home/grid-bestgrid'
 ng2BeSTGRIDArea.Type = 'volatile'
 ng2BeSTGRIDArea.ACL = [ '/ARCS/BeSTGRID' ]
 
-ng2BeSTGRIDArea = ng2StorageElement.areas['ng2.arcs.bestgrid.local'] = StorageArea()
+ng2CivEngArea = ng2StorageElement.areas['ng2.arcs.bestgrid.uoa.civeng'] = StorageArea()
  
-ng2BeSTGRIDArea.Path = '.[label=BeSTGRID home;user_subdir=False]'
-ng2BeSTGRIDArea.Type = 'volatile'
-ng2BeSTGRIDArea.ACL = [ '/ARCS/BeSTGRID/Local' ]
+ng2CivEngArea.Path = '/home/grid-civil'
+ng2CivEngArea.Type = 'volatile'
+ng2CivEngArea.ACL = [ '/ARCS/BeSTGRID/UoA/CivEng' ]
+
+ng2NGAdminArea = ng2StorageElement.areas['ng2.arcs.ngadmin'] = StorageArea()
+ 
+ng2NGAdminArea.Path = '/home/grid-admin'
+ng2NGAdminArea.Type = 'volatile'
+ng2NGAdminArea.ACL = [ '/ARCS/NGAdmin' ]
+
+ng2LocalBeSTGRIDArea = ng2StorageElement.areas['ng2.arcs.bestgrid.local'] = StorageArea()
+ 
+ng2LocalBeSTGRIDArea.Path = '.[label=BeSTGRID home;user_subdir=False]'
+ng2LocalBeSTGRIDArea.Type = 'volatile'
+ng2LocalBeSTGRIDArea.ACL = [ '/ARCS/BeSTGRID/Local' ]
 
 
 ng2BioInfoArea = ng2StorageElement.areas['ng2.arcs.bestgrid.uoa.bioinfo'] = StorageArea()
