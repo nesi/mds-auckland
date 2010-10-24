@@ -142,7 +142,10 @@ er171CE.LRMSType = 'Torque' # Torque|PBSPro|ANUPBS
 er171CE.qstat = '/usr/local/bin/qstat2'
 er171CE.pbsnodes = '/usr/local/bin/pbsnodes'
 er171CE.ACL = [ '/ARCS/NGAdmin', '/ARCS/BeSTGRID/UoA/BioInfo', '/ARCS/BeSTGRID', '/ARCS/BeSTGRID/UoA/SSRG1',
-                        '/ARCS/BeSTGRID/UoA/Brownings','/ARCS/BeSTGRID/Drug_discovery', '/ARCS/BeSTGRID/UoA/CivEng','/ARCS/BeSTGRID/UoA/LocalUsers', '/ARCS/BeSTGRID/Local' ]
+                        '/ARCS/BeSTGRID/UoA/Brownings',
+                        '/ARCS/BeSTGRID/Drug_discovery', 
+                        '/ARCS/BeSTGRID/UoA/CivEng',
+                        '/ARCS/BeSTGRID/Workshop','/ARCS/BeSTGRID/UoA/LocalUsers', '/ARCS/BeSTGRID/Local' ]
 
 er171BeSTGRIDView = er171CE.views['er171.arcs.bestgrid'] = VOView()
 
@@ -155,6 +158,11 @@ er171UoAView = er171CE.views['er171.arcs.bestgrid.uoa.localusers'] = VOView()
 er171UoAView.DefaultSE = 'ng2.auckland.ac.nz'
 er171UoAView.DataDir = '${GLOBUS_USER_HOME}'
 er171UoAView.ACL = [ '/ARCS/BeSTGRID/UoA/LocalUsers' ]
+
+er171WorkshopView = er171CE.views['er171.arcs.bestgrid.workshop'] = VOView()
+er171WorkshopView.DefaultSE = 'ng2.auckland.ac.nz'
+er171WorkshopView.DataDir  = '/home/grid-workshop'
+er171WorkshopView.ACL  = ['/ARCS/BeSTGRID/Workshop']
 
 
 er171CivEngView = er171CE.views['er171.arcs.bestgrid.uoa.civeng'] = VOView()
@@ -259,6 +267,11 @@ ng2BeSTGRIDArea.Path = '/home/grid-bestgrid'
 ng2BeSTGRIDArea.Type = 'volatile'
 ng2BeSTGRIDArea.ACL = [ '/ARCS/BeSTGRID' ]
 
+ng2WorkshopArea = ng2StorageElement.areas['ng2.arcs.bestgrid.workshop'] = StorageArea()
+ng2WorkshopArea.Path = '/home/grid-workshop'
+ng2WorkshopArea.Type = 'volatile'
+ng2WorkshopArea.ACL = ['/ARCS/BeSTGRID/Workshop']
+
 ng2CivEngArea = ng2StorageElement.areas['ng2.arcs.bestgrid.uoa.civeng'] = StorageArea()
  
 ng2CivEngArea.Path = '/home/grid-civil'
@@ -290,12 +303,12 @@ ng2BrowningsArea.ACL = [ '/ARCS/BeSTGRID/UoA/Brownings' ]
 
 
 ng2DrugArea = ng2StorageElement.areas['ng2.arcs.bestgrid.drug_discovery'] = StorageArea()
-ng2DrugArea.Path = '/home/grid-vs[label=Drug discovery home;user_subdir=False]'
+ng2DrugArea.Path = '/home/grid-vs[label=Drug discovery resources;user_subdir=False]'
 ng2DrugArea.Type = 'volatile'
 ng2DrugArea.ACL = [ '/ARCS/BeSTGRID/Drug_discovery' ]
 
 ng2DrugLocalArea = ng2StorageElement.areas['ng2.arcs.bestgrid.drug_discovery.local'] = StorageArea()
-ng2DrugLocalArea.Path =  '.[label=VS Job dir;user_subdir=False;hidden=True]'
+ng2DrugLocalArea.Path =  '.[label=Drug discovery user home;user_subdir=False;hidden=True]'
 ng2DrugLocalArea.ACL = [ '/ARCS/BeSTGRID/Drug_discovery/Local' ]
 
 
