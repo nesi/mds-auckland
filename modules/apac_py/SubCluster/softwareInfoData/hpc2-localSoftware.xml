@@ -149,12 +149,12 @@
           </SoftwareExecutable>
         </SoftwarePackage>
 
-	<SoftwarePackage LocalID="Gold/1.3.2" xmlns="http://grid.apac.edu.au/glueschema/Spec/V12/R2">
+	<SoftwarePackage LocalID="Gold/5.0" xmlns="http://grid.apac.edu.au/glueschema/Spec/V12/R2">
           <Name>Gold</Name>
-          <Version>1.3.2</Version>
+          <Version>5.0</Version>
           <SoftwareExecutable LocalID="Gold/1.3.2">
             <Name>parallel_gold_auto</Name>
-            <Path>/share/apps/gold/GOLD_Suite/bin</Path>
+            <Path>/share/apps/gold/GOLD/bin</Path>
             <SerialAvail>false</SerialAvail>
             <ParallelAvail>true</ParallelAvail>
           </SoftwareExecutable>
