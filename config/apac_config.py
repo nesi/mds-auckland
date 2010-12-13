@@ -145,7 +145,14 @@ er171CE.ACL = [ '/ARCS/NGAdmin', '/ARCS/BeSTGRID/UoA/BioInfo', '/ARCS/BeSTGRID',
                         '/ARCS/BeSTGRID/UoA/Brownings',
                         '/ARCS/BeSTGRID/Drug_discovery', 
                         '/ARCS/BeSTGRID/UoA/CivEng',
-                        '/ARCS/BeSTGRID/Workshop','/ARCS/BeSTGRID/UoA/LocalUsers', '/ARCS/BeSTGRID/Local' ]
+                        '/ARCS/BeSTGRID/Workshop','/ARCS/BeSTGRID/UoA/LocalUsers', '/ARCS/BeSTGRID/Local',
+                '/bestgrid.org']
+
+er171ORGView = er171CE.views['er171.bestgridOrg'] = VOView()
+er171ORGView.RealUser = 'grid-bestgrid'
+er171ORGView.DefaultSE = 'ng2.auckland.ac.nz'
+er171ORGView.DataDir = '/home/grid-bestgrid'
+er171ORGView.ACL = [ '/bestgrid.org' ]
 
 er171BeSTGRIDView = er171CE.views['er171.arcs.bestgrid'] = VOView()
 
@@ -254,6 +261,11 @@ ng2StorageElement = package.StorageElement['ng2.auckland.ac.nz'] = StorageElemen
 # STORAGE ELEMENT AREA
 # this name must be unique for each storage area in the storage element. It is not reference anywhere else.
 # see twiki page for further details on this section
+
+ng2BeSTGRIDORGArea = ng2StorageElement.areas['ng2.bestgridOrg'] = StorageArea();
+ng2BeSTGRIDORGArea.Path = '/home/grid-bestgrid';
+ng2BeSTGRIDORGArea.Type = 'volatile'
+ng2BeSTGRIDORGArea.ACL = [ '/bestgrid.org' ]
 
 ng2LocalArea = ng2StorageElement.areas['ng2.arcs.bestgrid.uoa.localusers'] = StorageArea();
 ng2LocalArea.Path = '${GLOBUS_USER_HOME}';
