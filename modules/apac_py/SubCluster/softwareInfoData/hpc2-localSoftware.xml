@@ -166,7 +166,7 @@
           <apac:Module>szybki</apac:Module>
 	  <VOView LocalID="arcs.bestgrid.drug_discovery">
 	    <ACL>
-	      <Rule>/ARCS/BeSTGRID/Drug_discovery</glue:Rule>
+	      <Rule>/ARCS/BeSTGRID/Drug_discovery</Rule>
 	    </ACL>
 	  </VOView> 
           <apac:SoftwareExecutable LocalID="szybki/1.3.4">
