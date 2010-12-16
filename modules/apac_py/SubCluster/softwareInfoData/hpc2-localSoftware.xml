@@ -187,7 +187,7 @@
 	  <ACL>
 	    <glue:Rule>/ARCS/BeSTGRID/UoA/CivEng</glue:Rule>
 	  </ACL>
-          <! -- <Module>abaqus</Module> -->
+          <!-- <Module>abaqus</Module> -->
           <SoftwareExecutable LocalID="Abaqus/6.8-EF2">
             <Name>abaqus</Name>
             <Path>/share/apps/abaqus/Commands</Path>
