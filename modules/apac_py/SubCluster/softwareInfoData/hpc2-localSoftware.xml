@@ -160,7 +160,7 @@
           </SoftwareExecutable>
         </SoftwarePackage>
 
-	<apac:SoftwarePackage LocalID="szybki/1.3.4" xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2">
+	<SoftwarePackage LocalID="szybki/1.3.4" xmlns="http://forge.cnaf.infn.it/glueschema/Spec/V12/R2">
           <apac:Name>szybki</apac:Name>
           <apac:Version>1.3.4</apac:Version>
           <apac:Module>szybki</apac:Module>
@@ -175,7 +175,7 @@
             <SerialAvail>true</SerialAvail>
             <ParallelAvail>true</ParallelAvail>
           </apac:SoftwareExecutable>
-        </apac:SoftwarePackage>
+        </SoftwarePackage>
 
         <SoftwarePackage LocalID="python/2.6" xmlns="http://grid.apac.edu.au/glueschema/Spec/V12/R2">
           <Name>python</Name>
