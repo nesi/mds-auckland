@@ -202,7 +202,7 @@
 	  <ACL>
 	    <glue:Rule>/ARCS/BeSTGRID/UoA/CivEng</glue:Rule>
 	  </ACL>
-          <! -- <Module>abaqus</Module> -->
+          <!-- <Module>abaqus</Module> -->
           <SoftwareExecutable LocalID="oplrun/12.2">
             <Name>oplrun</Name>
             <Path>/share/apps/ilog/opl/bin/x86-64_sles10_4.1/Path>
