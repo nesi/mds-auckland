@@ -164,11 +164,10 @@
           <Name>szybki</Name>
           <Version>1.3.4</Version>
           <Module>szybki</Module>
-	  <VOView>
+	  <VOView LocalID="arcs.bestgrid.drug_discovery">
 	    <ACL>
 	      <glue:Rule>/ARCS/BeSTGRID/Drug_discovery</glue:Rule>
 	    </ACL>
-	    <LocalID>arcs.bestgrid.drug_discovery</LocalID>
 	  </VOView> 
           <SoftwareExecutable LocalID="szybki/1.3.4">
             <Name>szybki</Name>
