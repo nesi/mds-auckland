@@ -205,7 +205,7 @@
           <!-- <Module>abaqus</Module> -->
           <SoftwareExecutable LocalID="oplrun/12.2">
             <Name>oplrun</Name>
-            <Path>/share/apps/ilog/opl/bin/x86-64_sles10_4.1/Path>
+            <Path>/share/apps/ilog/opl/bin/x86-64_sles10_4.1</Path>
             <SerialAvail>true</SerialAvail>
             <ParallelAvail>true</ParallelAvail>
           </SoftwareExecutable>
