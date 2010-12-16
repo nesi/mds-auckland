@@ -9,7 +9,7 @@
 		<Version>3.1.2</Version>
 		<Module>mrbayes/3.1.2</Module>
 		<ACL>
-			<glue:Rule>/ARCS</glue:Rule>
+			<Rule>/ARCS</Rule>
 		</ACL>
                 <SoftwareExecutable LocalID="mrbayes-parallel">
                         <Name>mb</Name>
