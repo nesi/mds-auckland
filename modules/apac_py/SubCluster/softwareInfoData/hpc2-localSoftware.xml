@@ -9,7 +9,7 @@
 		<Version>3.1.2</Version>
 		<Module>mrbayes/3.1.2</Module>
 		<ACL>
-			<Rule>/ARCS</Rule>
+			<glue:Rule>/ARCS</glue:Rule>
 		</ACL>
                 <SoftwareExecutable LocalID="mrbayes-parallel">
                         <Name>mb</Name>
@@ -164,12 +164,11 @@
           <Name>szybki</Name>
           <Version>1.3.4</Version>
           <Module>szybki</Module>
-	  <!-- <VOView>
+	  <VOView>
 	    <ACL>
 	      <glue:Rule>/ARCS/BeSTGRID/Drug_discovery</glue:Rule>
 	    </ACL>
 	  </VOView> 
-	  -->
           <SoftwareExecutable LocalID="szybki/1.3.4">
             <Name>szybki</Name>
             <Path>/share/apps/bio/openeye/arch/redhat-RHEL4-x86/szybki/1.3.4/bin</Path>
