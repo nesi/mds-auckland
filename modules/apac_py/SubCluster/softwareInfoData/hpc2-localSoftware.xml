@@ -146,6 +146,9 @@
 	<SoftwarePackage LocalID="Gold/5.0" xmlns="http://grid.apac.edu.au/glueschema/Spec/V12/R2">
           <Name>Gold</Name>
           <Version>5.0</Version>
+	  <ACL>
+	    <glue:Rule>/ARCS/BeSTGRID/Drug_discovery</glue:Rule>
+	  </ACL>
           <SoftwareExecutable LocalID="Gold/1.3.2">
             <Name>parallel_gold_auto</Name>
             <Path>/share/apps/gold/GOLD/bin</Path>
