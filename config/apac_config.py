@@ -144,6 +144,7 @@ er171CE.pbsnodes = '/usr/local/bin/pbsnodes'
 er171CE.ACL = [ '/ARCS/NGAdmin', '/ARCS/BeSTGRID/UoA/BioInfo', '/ARCS/BeSTGRID', '/ARCS/BeSTGRID/UoA/SSRG1',
                         '/ARCS/BeSTGRID/UoA/Brownings',
                         '/ARCS/BeSTGRID/Drug_discovery', 
+                        '/ARCS/BeSTGRID/Drug_discovery/Acsrc', 
                         '/ARCS/BeSTGRID/UoA/CivEng',
                         '/ARCS/BeSTGRID/Workshop','/ARCS/BeSTGRID/UoA/LocalUsers', '/ARCS/BeSTGRID/Local',
                 '/bestgrid.org']
@@ -214,6 +215,12 @@ er171DrugView.RealUser = 'grid-vs'
 er171DrugView.DataDir = '/home/grid-vs[label=Drug discovery home;user_subdir=False]'
 er171DrugView.DefaultSE = 'ng2.auckland.ac.nz'
 er171DrugView.ACL = ['/ARCS/BeSTGRID/Drug_discovery']
+
+er171DrugAcsrcView = er171CE.views['er171.arcs.bestgrid.drug_discovery.acsrc'] = VOView()
+er171DrugAcsrcView.RealUser = 'grid-acsrc'
+er171DrugAcsrcView.DataDir = '/home/grid-vs[label=Acsrc home;user_subdir=False]'
+er171DrugAcsrcView.DefaultSE = 'ng2.auckland.ac.nz'
+er171DrugAcsrcView.ACL = ['/ARCS/BeSTGRID/Drug_discovery/Acsrc']
 
 subcluster = package.SubCluster['ng2.auckland.ac.nz-hpc2'] = SubCluster()
  
@@ -313,11 +320,20 @@ ng2BrowningsArea.Path = '/home/grid-browning'
 ng2BrowningsArea.Type = 'volatile'
 ng2BrowningsArea.ACL = [ '/ARCS/BeSTGRID/UoA/Brownings' ]
 
+"""
+ Drug Discovery Project
+"""
 
 ng2DrugArea = ng2StorageElement.areas['ng2.arcs.bestgrid.drug_discovery'] = StorageArea()
 ng2DrugArea.Path = '/home/grid-vs[label=Drug discovery resources;user_subdir=False]'
 ng2DrugArea.Type = 'volatile'
 ng2DrugArea.ACL = [ '/ARCS/BeSTGRID/Drug_discovery' ]
+
+ng2DrugAcsrcArea = ng2StorageElement.areas['ng2.arcs.bestgrid.drug_discovery.acsrc'] = StorageArea()
+ng2DrugAcsrcArea.Path = '/home/grid-acsrc[label=Acsrc  resources;user_subdir=False]'
+ng2DrugAcsrcArea.Type = 'volatile'
+ng2DrugAcsrcArea.ACL = [ '/ARCS/BeSTGRID/Drug_discovery/Acsrc' ]
+
 
 ng2DrugLocalArea = ng2StorageElement.areas['ng2.arcs.bestgrid.drug_discovery.local'] = StorageArea()
 ng2DrugLocalArea.Path =  '.[label=Drug discovery user home;user_subdir=False;hidden=True]'
