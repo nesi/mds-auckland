@@ -144,7 +144,7 @@ er171CE.pbsnodes = '/usr/local/bin/pbsnodes'
 er171CE.ACL = [ '/ARCS/NGAdmin', '/ARCS/BeSTGRID/UoA/BioInfo', '/ARCS/BeSTGRID', '/ARCS/BeSTGRID/UoA/SSRG1',
                         '/ARCS/BeSTGRID/UoA/Brownings',
                         '/ARCS/BeSTGRID/Drug_discovery', 
-                        '/ARCS/BeSTGRID/Drug_discovery/Acsrc', 
+                        '/ARCS/BeSTGRID/Drug_discovery/ACSRC', 
                         '/ARCS/BeSTGRID/UoA/CivEng',
                         '/ARCS/BeSTGRID/Workshop','/ARCS/BeSTGRID/UoA/LocalUsers', '/ARCS/BeSTGRID/Local',
                 '/bestgrid.org']
@@ -220,7 +220,7 @@ er171DrugAcsrcView = er171CE.views['er171.arcs.bestgrid.drug_discovery.acsrc'] =
 er171DrugAcsrcView.RealUser = 'grid-acsrc'
 er171DrugAcsrcView.DataDir = '/home/grid-vs[label=Acsrc home;user_subdir=False]'
 er171DrugAcsrcView.DefaultSE = 'ng2.auckland.ac.nz'
-er171DrugAcsrcView.ACL = ['/ARCS/BeSTGRID/Drug_discovery/Acsrc']
+er171DrugAcsrcView.ACL = ['/ARCS/BeSTGRID/Drug_discovery/ACSRC']
 
 subcluster = package.SubCluster['ng2.auckland.ac.nz-hpc2'] = SubCluster()
  
@@ -332,7 +332,7 @@ ng2DrugArea.ACL = [ '/ARCS/BeSTGRID/Drug_discovery' ]
 ng2DrugAcsrcArea = ng2StorageElement.areas['ng2.arcs.bestgrid.drug_discovery.acsrc'] = StorageArea()
 ng2DrugAcsrcArea.Path = '/home/grid-acsrc[label=Acsrc  resources;user_subdir=False]'
 ng2DrugAcsrcArea.Type = 'volatile'
-ng2DrugAcsrcArea.ACL = [ '/ARCS/BeSTGRID/Drug_discovery/Acsrc' ]
+ng2DrugAcsrcArea.ACL = [ '/ARCS/BeSTGRID/Drug_discovery/ACSRC' ]
 
 
 ng2DrugLocalArea = ng2StorageElement.areas['ng2.arcs.bestgrid.drug_discovery.local'] = StorageArea()
