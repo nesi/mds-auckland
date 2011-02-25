@@ -146,6 +146,7 @@ er171CE.ACL = [ '/ARCS/NGAdmin', '/ARCS/BeSTGRID/UoA/BioInfo', '/ARCS/BeSTGRID',
                         '/ARCS/BeSTGRID/Drug_discovery', 
                         '/ARCS/BeSTGRID/Drug_discovery/ACSRC', 
                         '/ARCS/BeSTGRID/UoA/CivEng',
+                        '/ARCS/BeSTGRID/Quantum_Optics',
                         '/ARCS/BeSTGRID/Workshop','/ARCS/BeSTGRID/UoA/LocalUsers', '/ARCS/BeSTGRID/Local',
                 '/nz/eResearch']
 
@@ -166,6 +167,11 @@ er171UoAView = er171CE.views['er171.arcs.bestgrid.uoa.localusers'] = VOView()
 er171UoAView.DefaultSE = 'ng2.auckland.ac.nz'
 er171UoAView.DataDir = '${GLOBUS_USER_HOME}'
 er171UoAView.ACL = [ '/ARCS/BeSTGRID/UoA/LocalUsers' ]
+
+er171OpticsView = er171CE.views['er171.arcs.bestgrid.quantum_optics'] = VOView()
+er171OpticsView.DefaultSE = 'ng2.auckland.ac.nz'
+er171OpticsView.DataDir = '${GLOBUS_USER_HOME}'
+er171OpticsView.ACL = [ '/ARCS/BeSTGRID/Quantum_Optics' ]
 
 er171WorkshopView = er171CE.views['er171.arcs.bestgrid.workshop'] = VOView()
 er171WorkshopView.DefaultSE = 'ng2.auckland.ac.nz'
@@ -319,6 +325,11 @@ ng2BrowningsArea = ng2StorageElement.areas['ng2.arcs.bestgrid.uoa.brownings'] = 
 ng2BrowningsArea.Path = '/home/grid-browning'
 ng2BrowningsArea.Type = 'volatile'
 ng2BrowningsArea.ACL = [ '/ARCS/BeSTGRID/UoA/Brownings' ]
+
+ng2QOArea = ng2StorageElement.areas['ng2.arcs.bestgrid.quantum_optics'] = StorageArea()
+ng2QOArea.Type = 'volatile'
+ng2QOArea.Path =  '.[label=Quantum Optics user home;user_subdir=False;hidden=True]'
+ng2QOArea.ACL = [ '/ARCS/BeSTGRID/Quantum_Optics' ]
 
 """
  Drug Discovery Project
