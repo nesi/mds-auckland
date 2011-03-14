@@ -367,7 +367,7 @@ accessProtocol.Capability = [ 'file transfer', 'other capability' ]
 
 dfAucklandSE = package.StorageElement['df.auckland.ac.nz'] = StorageElement()
 
-dfLocalArea = ng2StorageElement.areas['df-auckland.arcs.bestgrid.local'] = StorageArea()
+dfLocalArea = dfAucklandSE.areas['df-auckland.arcs.bestgrid.local'] = StorageArea()
  
 dfLocalArea.Path = '${GLOBUS_USER_HOME}';
 dfLocalArea.Type = 'volatile'
