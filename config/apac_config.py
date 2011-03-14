@@ -357,7 +357,6 @@ ng2DrugLocalArea.ACL = [ '/ARCS/BeSTGRID/Drug_discovery/Local' ]
 # this name must be unique for each protocol in the storage element. It is not reference anywhere else.
 # see twiki page for further details on this section
 accessProtocol = ng2StorageElement.access_protocols['protocol'] = AccessProtocol()
-
 accessProtocol.Type = 'gsiftp'
 accessProtocol.Version = '2.3'
 accessProtocol.Endpoint = 'gsiftp://ng2.auckland.ac.nz:2811'
@@ -365,3 +364,17 @@ accessProtocol.Capability = [ 'file transfer', 'other capability' ]
 
 
 ####
+
+dfAucklandSE = package.StorageElement['df.auckland.ac.nz'] = StorageElement()
+
+dfLocalArea = ng2StorageElement.areas['df-auckland.arcs.bestgrid.local'] = StorageArea()
+ 
+dfLocalArea.Path = '${GLOBUS_USER_HOME}';
+dfLocalArea.Type = 'volatile'
+dfLocalArea.ACL = [ '/ARCS/BeSTGRID/Local' ]
+
+acccessProtocol = dfAucklandSE.access_protocols['protocol'] = AccessProtocol()
+accessProtocol.Type = 'gsiftp'
+accessProtocol.Version = '2.3'
+accessProtocol.Endpoint = 'gsiftp://df.auckland.ac.nz:2811'
+accessProtocol.Capability = [ 'file transfer', 'other capability' ]
