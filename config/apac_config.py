@@ -368,13 +368,12 @@ accessProtocol.Capability = [ 'file transfer', 'other capability' ]
 dfAucklandSE = package.StorageElement['df.auckland.ac.nz'] = StorageElement()
 
 dfLocalArea = dfAucklandSE.areas['df-auckland.arcs.bestgrid.local'] = StorageArea()
- 
 dfLocalArea.Path = '${GLOBUS_USER_HOME}';
-dfLocalArea.Type = 'volatile'
-dfLocalArea.ACL = [ '/ARCS/BeSTGRID/Local' ]
+dfLocalArea.VirtualPath =  '${GLOBUS_USER_HOME}';
+dfLocalArea.ACL = [ '/ARCS/BeSTGRID/Local' ];
 
-acccessProtocol = dfAucklandSE.access_protocols['protocol'] = AccessProtocol()
-accessProtocol.Type = 'gsiftp'
-accessProtocol.Version = '2.3'
-accessProtocol.Endpoint = 'gsiftp://df.auckland.ac.nz:2811'
-accessProtocol.Capability = [ 'file transfer', 'other capability' ]
+dfaccess = dfAucklandSE.access_protocols['protocol'] = AccessProtocol()
+dfaccess.Type = 'gsiftp'
+dfaccess.Version = '2.3'
+dfaccess.Endpoint = 'gsiftp://df.auckland.ac.nz:2811'
+dfaccess.Capability = [ 'file transfer', 'other capability' ]
