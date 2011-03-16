@@ -131,7 +131,7 @@ er171CE.ACL = [ '/ARCS/NGAdmin', '/ARCS/BeSTGRID/UoA/BioInfo', '/ARCS/BeSTGRID',
                         '/ARCS/BeSTGRID/UoA/CivEng',
                         '/ARCS/BeSTGRID/Quantum_Optics',
                         '/ARCS/BeSTGRID/Workshop','/ARCS/BeSTGRID/UoA/LocalUsers', '/ARCS/BeSTGRID/Local',
-                '/nz/eResearch']
+                '/nz/UoA']
 
 er171ORGView = er171CE.views['er171.nz.uoa'] = VOView()
 er171ORGView.DataDir = '${GLOBUS_USER_HOME}'
@@ -255,6 +255,7 @@ ng2StorageElement = package.StorageElement['ng2.auckland.ac.nz'] = StorageElemen
 
 ng2BeSTGRIDORGArea = ng2StorageElement.areas['ng2.nz.uoa'] = StorageArea();
 ng2BeSTGRIDORGArea.Path = '${GLOBUS_USER_HOME}'
+ng2BeSTGRIDORGArea.VirtualPath = '${GLOBUS_USER_HOME}'
 ng2BeSTGRIDORGArea.Type = 'volatile'
 ng2BeSTGRIDORGArea.ACL = [ '/nz/UoA' ]
 
