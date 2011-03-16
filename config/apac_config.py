@@ -127,6 +127,7 @@ er171CE.pbsnodes = '/usr/local/bin/pbsnodes'
 er171CE.ACL = [ '/ARCS/NGAdmin', '/ARCS/BeSTGRID', 
                         '/ARCS/BeSTGRID/Drug_discovery/Local', 
                         '/ARCS/BeSTGRID/UoA/CivEng',
+                        '/ARCS/BeSTGRID/UoA/MechEng',
                         '/ARCS/BeSTGRID/Quantum_Optics',
                         '/ARCS/BeSTGRID/Workshop','/ARCS/BeSTGRID/UoA/LocalUsers', '/ARCS/BeSTGRID/Local',
                 '/nz/UoA']
@@ -152,6 +153,11 @@ er171OpticsView = er171CE.views['er171.arcs.bestgrid.quantum_optics'] = VOView()
 er171OpticsView.DefaultSE = 'ng2.auckland.ac.nz'
 er171OpticsView.DataDir = '${GLOBUS_USER_HOME}'
 er171OpticsView.ACL = [ '/ARCS/BeSTGRID/Quantum_Optics' ]
+
+er171MechView = er171CE.views['er171.arcs.bestgrid.mechEng'] = VOView()
+er171MechView.DefaultSE = 'ng2.auckland.ac.nz'
+er171MechView.DataDir = '${GLOBUS_USER_HOME}'
+er171MechView.ACL = [ '/ARCS/BeSTGRID/UoA/MechEng' ]
 
 er171WorkshopView = er171CE.views['er171.arcs.bestgrid.workshop'] = VOView()
 er171WorkshopView.DefaultSE = 'ng2.auckland.ac.nz'
@@ -314,6 +320,11 @@ ng2QOArea = ng2StorageElement.areas['ng2.arcs.bestgrid.quantum_optics'] = Storag
 ng2QOArea.Type = 'volatile'
 ng2QOArea.Path =  '.[label=Quantum Optics user home;user_subdir=False;hidden=True]'
 ng2QOArea.ACL = [ '/ARCS/BeSTGRID/Quantum_Optics' ]
+
+ng2MechArea = ng2StorageElement.areas['ng2.arcs.bestgrid.mechEng'] = StorageArea()
+ng2MechArea.Type = 'volatile'
+ng2MechArea.Path =  '.[label=Mechanical ENgineering user home;user_subdir=False;hidden=True]'
+ng2MechArea.ACL = [ '/ARCS/BeSTGRID/UoA/MechEng' ]
 
 """
  Drug Discovery Project
