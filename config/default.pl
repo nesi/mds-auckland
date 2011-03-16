@@ -5,5 +5,5 @@ uids =>  {
 #   ComputingElement => [ "ng2hpc.ceres.auckland.ac.nz-compute1", ],
 #   SubCluster => [ "ng2hpc.ceres.auckland.ac.nz-hpc", ],
 #   StorageElement => [ "ng2hpc.ceres.auckland.ac.nz","ngdata.ceres.auckland.ac.nz"],
-StorageElement => [ "ngdata.ceres.auckland.ac.nz"],
+#StorageElement => [ "ngdata.ceres.auckland.ac.nz"],
 }
