@@ -150,11 +150,10 @@ er171CE.ACL = [ '/ARCS/NGAdmin', '/ARCS/BeSTGRID/UoA/BioInfo', '/ARCS/BeSTGRID',
                         '/ARCS/BeSTGRID/Workshop','/ARCS/BeSTGRID/UoA/LocalUsers', '/ARCS/BeSTGRID/Local',
                 '/nz/eResearch']
 
-er171ORGView = er171CE.views['er171.bestgridOrg'] = VOView()
-er171ORGView.RealUser = 'grid-bestgrid'
+er171ORGView = er171CE.views['er171.nz.uoa'] = VOView()
+er171ORGView.DataDir = '${GLOBUS_USER_HOME}'
 er171ORGView.DefaultSE = 'ng2.auckland.ac.nz'
-er171ORGView.DataDir = '/home/grid-bestgrid'
-er171ORGView.ACL = [ '/nz/eResearch' ]
+er171ORGView.ACL = [ '/nz/UoA' ]
 
 er171BeSTGRIDView = er171CE.views['er171.arcs.bestgrid'] = VOView()
 
@@ -275,10 +274,10 @@ ng2StorageElement = package.StorageElement['ng2.auckland.ac.nz'] = StorageElemen
 # this name must be unique for each storage area in the storage element. It is not reference anywhere else.
 # see twiki page for further details on this section
 
-ng2BeSTGRIDORGArea = ng2StorageElement.areas['ng2.bestgridOrg'] = StorageArea();
-ng2BeSTGRIDORGArea.Path = '/home/grid-bestgrid';
+ng2BeSTGRIDORGArea = ng2StorageElement.areas['ng2.nz.uoa'] = StorageArea();
+ng2BeSTGRIDORGArea.Path = '${GLOBUS_USER_HOME}'
 ng2BeSTGRIDORGArea.Type = 'volatile'
-ng2BeSTGRIDORGArea.ACL = [ '/nz/eResearch' ]
+ng2BeSTGRIDORGArea.ACL = [ '/nz/UoA' ]
 
 ng2LocalArea = ng2StorageElement.areas['ng2.arcs.bestgrid.uoa.localusers'] = StorageArea();
 ng2LocalArea.Path = '${GLOBUS_USER_HOME}';
@@ -363,14 +362,14 @@ accessProtocol.Endpoint = 'gsiftp://ng2.auckland.ac.nz:2811'
 accessProtocol.Capability = [ 'file transfer', 'other capability' ]
 
 
-####
+#### data fabric mappings 
 
 dfAucklandSE = package.StorageElement['df.auckland.ac.nz'] = StorageElement()
 
 dfLocalArea = dfAucklandSE.areas['df-auckland.arcs.bestgrid.local'] = StorageArea()
 dfLocalArea.Path = '${GLOBUS_USER_HOME}';
 dfLocalArea.VirtualPath =  '${GLOBUS_USER_HOME}';
-dfLocalArea.ACL = [ '/ARCS/BeSTGRID/Local' ];
+dfLocalArea.ACL = [ '/ARCS/BeSTGRID/Local','/nz/NeSI/data' ];
 
 dfaccess = dfAucklandSE.access_protocols['protocol'] = AccessProtocol()
 dfaccess.Type = 'gsiftp'
