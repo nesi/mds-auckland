@@ -124,10 +124,8 @@ er171CE.LRMSType = 'Torque' # Torque|PBSPro|ANUPBS
 
 er171CE.qstat = '/usr/local/bin/qstat2'
 er171CE.pbsnodes = '/usr/local/bin/pbsnodes'
-er171CE.ACL = [ '/ARCS/NGAdmin', '/ARCS/BeSTGRID/UoA/BioInfo', '/ARCS/BeSTGRID', '/ARCS/BeSTGRID/UoA/SSRG1',
-                        '/ARCS/BeSTGRID/UoA/Brownings',
-                        '/ARCS/BeSTGRID/Drug_discovery', 
-                        '/ARCS/BeSTGRID/Drug_discovery/ACSRC', 
+er171CE.ACL = [ '/ARCS/NGAdmin', '/ARCS/BeSTGRID', 
+                        '/ARCS/BeSTGRID/Drug_discovery/Local', 
                         '/ARCS/BeSTGRID/UoA/CivEng',
                         '/ARCS/BeSTGRID/Quantum_Optics',
                         '/ARCS/BeSTGRID/Workshop','/ARCS/BeSTGRID/UoA/LocalUsers', '/ARCS/BeSTGRID/Local',
@@ -202,9 +200,15 @@ er171DrugView.ACL = ['/ARCS/BeSTGRID/Drug_discovery']
 
 er171DrugAcsrcView = er171CE.views['er171.arcs.bestgrid.drug_discovery.acsrc'] = VOView()
 er171DrugAcsrcView.RealUser = 'grid-acsrc'
-er171DrugAcsrcView.DataDir = '/home/grid-vs[label=Acsrc home;user_subdir=False]'
+er171DrugAcsrcView.DataDir = '/home/grid-acsrc[label=Acsrc home;user_subdir=False]'
 er171DrugAcsrcView.DefaultSE = 'ng2.auckland.ac.nz'
 er171DrugAcsrcView.ACL = ['/ARCS/BeSTGRID/Drug_discovery/ACSRC']
+
+er171DrugSBSView = er171CE.views['er171.arcs.bestgrid.drug_discovery.sbs'] = VOView()
+er171DrugSBSView.RealUser = 'grid-sbs'
+er171DrugSBSView.DataDir = '/home/grid-sbs[label=SBS home;user_subdir=False]'
+er171DrugSBSView.DefaultSE = 'ng2.auckland.ac.nz'
+er171DrugSBSView.ACL = ['/ARCS/BeSTGRID/Drug_discovery/SBS-Structural_Biology']
 
 subcluster = package.SubCluster['ng2.auckland.ac.nz-hpc2'] = SubCluster()
  
@@ -324,6 +328,11 @@ ng2DrugAcsrcArea = ng2StorageElement.areas['ng2.arcs.bestgrid.drug_discovery.acs
 ng2DrugAcsrcArea.Path = '/home/grid-acsrc[label=Acsrc  resources;user_subdir=False]'
 ng2DrugAcsrcArea.Type = 'volatile'
 ng2DrugAcsrcArea.ACL = [ '/ARCS/BeSTGRID/Drug_discovery/ACSRC' ]
+
+ng2DrugSBSArea = ng2StorageElement.areas['ng2.arcs.bestgrid.drug_discovery.sbs'] = StorageArea()
+ng2DrugSBSArea.Path = '/home/grid-sbs[label=SBS  resources;user_subdir=False]'
+ng2DrugSBSArea.Type = 'volatile'
+ng2DrugSBSArea.ACL = [ '/ARCS/BeSTGRID/Drug_discovery/SBS' ]
 
 
 ng2DrugLocalArea = ng2StorageElement.areas['ng2.arcs.bestgrid.drug_discovery.local'] = StorageArea()
