@@ -73,23 +73,6 @@ cluster.WNTmpDir = '/tmp'
 cluster.TmpDir = '/home/grid-bestgrid'
 
 
-
-
-# ngdata is  gridftp server for user permanent data
-
-ngdataStorageElement = package.StorageElement['ngdata.ceres.auckland.ac.nz'] = StorageElement()
-ngdataLocalArea = ngdataStorageElement.areas['ngdata.arcs.bestgrid.uoa.localusers'] = StorageArea();
-ngdataLocalArea.Path = '${GLOBUS_USER_HOME}';
-ngdataLocalArea.VirtualPath =  '${GLOBUS_USER_HOME}'
-ngdataLocalArea.Type = 'volatile';
-ngdataLocalArea.ACL = ['/ARCS/BeSTGRID/UoA/LocalUsers'];
-
-ngdataAccess = ngdataStorageElement.access_protocols['ngdataAccessProtocol'] = AccessProtocol();
-ngdataAccess.Type = "gsiftp"
-ngdataAccess.Version = "2.3"
-ngdataAccess.Endpoint = "gsiftp://ngdata.ceres.auckland.ac.nz:2811"
-ngdataAccess.Capability = ['file transfer', 'other capability']
-
 # new cluster
 
 
@@ -194,9 +177,8 @@ er171NGAdminView.ACL = [ '/ARCS/NGAdmin' ]
 
 er171BeSTGRIDLocalView = er171CE.views['er171.arcs.bestgrid.local'] = VOView()
 
-#er171BeSTGRIDLocalView.RealUser = 'grid-bestgrid'
 er171BeSTGRIDLocalView.DefaultSE = 'ng2.auckland.ac.nz'
-er171BeSTGRIDLocalView.DataDir = '.[label=BeSTGRID home;user_subdir=False]'
+er171BeSTGRIDLocalView.DataDir = '${GLOBUS_USER_HOME}'
 er171BeSTGRIDLocalView.ACL = [ '/ARCS/BeSTGRID/Local' ]
 
 er171BrowningsView = er171CE.views['er171.arcs.bestgrid.uoa.brownings'] = VOView()
@@ -211,9 +193,6 @@ er171BioInfoView.DefaultSE = 'ng2.auckland.ac.nz'
 er171BioInfoView.DataDir = '/home/grid-bio'
 er171BioInfoView.ACL = ['/ARCS/BeSTGRID/UoA/BioInfo']
 
-er171DataLocalView = er171CE.views['view7'] = VOView()
-er171DataLocalView.DefaultSE = 'ngdata.ceres.auckland.ac.nz'
-er171DataLocalView.ACL = ['/ARCS/BeSTGRID/UoA/LocalUsers']
 
 er171DrugView = er171CE.views['er171.arcs.bestgrid.drug_discovery'] = VOView()
 er171DrugView.RealUser = 'grid-vs'
@@ -311,6 +290,7 @@ ng2NGAdminArea.ACL = [ '/ARCS/NGAdmin' ]
 ng2LocalBeSTGRIDArea = ng2StorageElement.areas['ng2.arcs.bestgrid.local'] = StorageArea()
  
 ng2LocalBeSTGRIDArea.Path = '${GLOBUS_USER_HOME}';
+ng2LocalBeSTGRIDArea.VirtualPath = '${GLOBUS_USER_HOME}';
 ng2LocalBeSTGRIDArea.Type = 'volatile'
 ng2LocalBeSTGRIDArea.ACL = [ '/ARCS/BeSTGRID/Local' ]
 
