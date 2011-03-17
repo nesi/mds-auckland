@@ -343,7 +343,7 @@ ng2DrugAcsrcArea.ACL = [ '/ARCS/BeSTGRID/Drug_discovery/ACSRC' ]
 ng2DrugSBSArea = ng2StorageElement.areas['ng2.arcs.bestgrid.drug_discovery.sbs'] = StorageArea()
 ng2DrugSBSArea.Path = '/home/grid-sbs[label=SBS  resources;user_subdir=False]'
 ng2DrugSBSArea.Type = 'volatile'
-ng2DrugSBSArea.ACL = [ '/ARCS/BeSTGRID/Drug_discovery/SBS' ]
+ng2DrugSBSArea.ACL = [ '/ARCS/BeSTGRID/Drug_discovery/SBS-Structural_Biology' ]
 
 
 ng2DrugLocalArea = ng2StorageElement.areas['ng2.arcs.bestgrid.drug_discovery.local'] = StorageArea()
