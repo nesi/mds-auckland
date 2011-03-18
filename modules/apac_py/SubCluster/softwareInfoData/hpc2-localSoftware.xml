@@ -27,13 +27,13 @@
                 </SoftwareExecutable>
 	</SoftwarePackage>
 
-	<SoftwarePackage LocalID="BEAST/1.4.7" xmlns="http://grid.apac.edu.au/glueschema/Spec/V12/R2">
+	<SoftwarePackage LocalID="BEAST/1.6.1" xmlns="http://grid.apac.edu.au/glueschema/Spec/V12/R2">
           <Name>BEAST</Name>
-          <Version>1.4.7</Version>
-          <Module>BEAST/1.4.7</Module>
-          <SoftwareExecutable LocalID="BEAST/1.4.7-sequential">
+          <Version>1.6.1</Version>
+          <Module>BEAST/1.6.1</Module>
+          <SoftwareExecutable LocalID="BEAST/1.6.1-sequential">
             <Name>beast</Name>
-            <Path>/opt/shared/bin/</Path>
+            <Path>/usr/local/bin</Path>
             <SerialAvail>true</SerialAvail>
             <ParallelAvail>false</ParallelAvail>
           </SoftwareExecutable>
