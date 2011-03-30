@@ -332,23 +332,24 @@ ng2MechArea.ACL = [ '/ARCS/BeSTGRID/UoA/MechEng' ]
 
 ng2DrugArea = ng2StorageElement.areas['ng2.arcs.bestgrid.drug_discovery'] = StorageArea()
 ng2DrugArea.Path = '/home/grid-vs[label=Drug discovery resources;user_subdir=False]'
-ng2DrugArea.Type = 'volatile'
+ng2DrugArea.Type = 'permanent'
 ng2DrugArea.ACL = [ '/ARCS/BeSTGRID/Drug_discovery' ]
 
 ng2DrugAcsrcArea = ng2StorageElement.areas['ng2.arcs.bestgrid.drug_discovery.acsrc'] = StorageArea()
 ng2DrugAcsrcArea.Path = '/home/grid-acsrc[label=Acsrc  resources;user_subdir=False]'
-ng2DrugAcsrcArea.Type = 'volatile'
+ng2DrugAcsrcArea.Type = 'permanent'
 ng2DrugAcsrcArea.ACL = [ '/ARCS/BeSTGRID/Drug_discovery/ACSRC' ]
 
 ng2DrugSBSArea = ng2StorageElement.areas['ng2.arcs.bestgrid.drug_discovery.sbs'] = StorageArea()
 ng2DrugSBSArea.Path = '/home/grid-sbs[label=SBS  resources;user_subdir=False]'
-ng2DrugSBSArea.Type = 'volatile'
+ng2DrugSBSArea.Type = 'permanent'
 ng2DrugSBSArea.ACL = [ '/ARCS/BeSTGRID/Drug_discovery/SBS-Structural_Biology' ]
 
 
 ng2DrugLocalArea = ng2StorageElement.areas['ng2.arcs.bestgrid.drug_discovery.local'] = StorageArea()
 ng2DrugLocalArea.Path =  '.[label=Drug discovery user home;user_subdir=False;hidden=True]'
 ng2DrugLocalArea.ACL = [ '/ARCS/BeSTGRID/Drug_discovery/Local' ]
+ng2DrugLocalArea.Type = 'volatile';
 
 
 # /STORAGE ELEMENT AREA
@@ -370,7 +371,7 @@ dfAucklandSE = package.StorageElement['df.auckland.ac.nz'] = StorageElement()
 dfLocalArea = dfAucklandSE.areas['df-auckland.arcs.bestgrid.local'] = StorageArea()
 dfLocalArea.Path = '${GLOBUS_USER_HOME}';
 dfLocalArea.VirtualPath =  '${GLOBUS_USER_HOME}';
-dfLocalArea.ACL = [ '/ARCS/BeSTGRID/Local','/nz/NeSI/data' ];
+dfLocalArea.ACL = [ '/ARCS/BeSTGRID/Local','/nz/NeSI' ];
 dfLocalArea.Type = 'permanent';
 
 dfaccess = dfAucklandSE.access_protocols['protocol'] = AccessProtocol()
