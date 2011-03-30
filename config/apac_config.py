@@ -371,6 +371,7 @@ dfLocalArea = dfAucklandSE.areas['df-auckland.arcs.bestgrid.local'] = StorageAre
 dfLocalArea.Path = '${GLOBUS_USER_HOME}';
 dfLocalArea.VirtualPath =  '${GLOBUS_USER_HOME}';
 dfLocalArea.ACL = [ '/ARCS/BeSTGRID/Local','/nz/NeSI/data' ];
+dfLocalArea.Type = 'permanent';
 
 dfaccess = dfAucklandSE.access_protocols['protocol'] = AccessProtocol()
 dfaccess.Type = 'gsiftp'
