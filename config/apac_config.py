@@ -130,12 +130,12 @@ er171CE.ACL = [ '/ARCS/NGAdmin', '/ARCS/BeSTGRID',
                         '/ARCS/BeSTGRID/UoA/MechEng',
                         '/ARCS/BeSTGRID/Quantum_Optics',
                         '/ARCS/BeSTGRID/Workshop','/ARCS/BeSTGRID/UoA/LocalUsers', '/ARCS/BeSTGRID/Local',
-                '/nz/UoA']
+                '/nz/uoa']
 
 er171ORGView = er171CE.views['er171.nz.uoa'] = VOView()
 er171ORGView.DataDir = '${GLOBUS_USER_HOME}'
 er171ORGView.DefaultSE = 'ng2.auckland.ac.nz'
-er171ORGView.ACL = [ '/nz/UoA' ]
+er171ORGView.ACL = [ '/nz/uoa' ]
 
 er171BeSTGRIDView = er171CE.views['er171.arcs.bestgrid'] = VOView()
 
@@ -267,7 +267,7 @@ ng2BeSTGRIDORGArea = ng2StorageElement.areas['ng2.nz.uoa'] = StorageArea();
 ng2BeSTGRIDORGArea.Path = '${GLOBUS_USER_HOME}'
 ng2BeSTGRIDORGArea.VirtualPath = '${GLOBUS_USER_HOME}'
 ng2BeSTGRIDORGArea.Type = 'volatile'
-ng2BeSTGRIDORGArea.ACL = [ '/nz/UoA' ]
+ng2BeSTGRIDORGArea.ACL = [ '/nz/uoa' ]
 
 ng2LocalArea = ng2StorageElement.areas['ng2.arcs.bestgrid.uoa.localusers'] = StorageArea();
 ng2LocalArea.Path = '${GLOBUS_USER_HOME}';
@@ -372,7 +372,7 @@ dfAucklandSE = package.StorageElement['df.auckland.ac.nz'] = StorageElement()
 dfLocalArea = dfAucklandSE.areas['df-auckland.arcs.bestgrid.local'] = StorageArea()
 dfLocalArea.Path = '${GLOBUS_USER_HOME}';
 dfLocalArea.VirtualPath =  '${GLOBUS_USER_HOME}';
-dfLocalArea.ACL = [ '/ARCS/BeSTGRID/Local','/nz/NeSI' ];
+dfLocalArea.ACL = [ '/ARCS/BeSTGRID/Local','/nz/nesi' ];
 dfLocalArea.Type = 'permanent';
 
 dfaccess = dfAucklandSE.access_protocols['protocol'] = AccessProtocol()
